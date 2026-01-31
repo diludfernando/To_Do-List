@@ -30,6 +30,18 @@ var iteamsLeft;
     console.log("Initializing TaskMaster app");
 
     // TODO: Add element selection code here
+    const taskForm = document.getElementById('task-form');
+    const taskInput = document.getElementById('task-input');
+    const taskPriority = document.getElementById('task-priority');
+    const taskeDate = document.getElementById('task-date');
+    const taskList = document.getElementById('task-list');
+    const iteamsLeft = document.getElementById('items-left');
+
+    const filterButtons = document.querySelectorAll('.filter-button');
+
+    // log element verfication
+    console.log("Form element:", taskForm);
+    console.log("Filter buttons", filterButtons);
 
     console.log("TaskMaster app initialized"); 
  }
