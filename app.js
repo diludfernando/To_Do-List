@@ -22,6 +22,20 @@ var taskPriority;
 var taskDate;
 var iteamsLeft;
 
+
+
+
+/**
+* Updates the document title with task count
+*/
+
+function updateDocumentTitle(){
+
+   document.title = "TaskMaster - " + taske.length + " Tasks";
+
+}
+
+
  /**
     * Initialize the application
     */
@@ -43,8 +57,14 @@ var iteamsLeft;
     console.log("Form element:", taskForm);
     console.log("Filter buttons", filterButtons);
 
+    //Update document title
+    updateDocumentTitle();
+
     console.log("TaskMaster app initialized"); 
  }
+
+
+
 
  // Initialize when DOM is loaded
  document.addEventListener('DOMContentLoaded', initApp);
