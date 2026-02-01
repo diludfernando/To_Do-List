@@ -35,6 +35,25 @@ function updateDocumentTitle(){
 
 }
 
+/**
+ * Handle task form submission
+ * @param {Event} e - The form submission event
+ */
+function handleFormSubmit(e){
+   e.preventDefault();
+
+   var description = taskInput.value.trim();
+   var priority = taskPriority.value;
+   var date = taskDate.value;
+
+console.log("Form submitted with tasks:", description, priority, date);
+
+// TODO: We'll add validation and task creation in the next steps
+
+}
+
+
+
 
  /**
     * Initialize the application
@@ -44,14 +63,14 @@ function updateDocumentTitle(){
     console.log("Initializing TaskMaster app");
 
     // TODO: Add element selection code here
-    const taskForm = document.getElementById('task-form');
-    const taskInput = document.getElementById('task-input');
-    const taskPriority = document.getElementById('task-priority');
-    const taskeDate = document.getElementById('task-date');
-    const taskList = document.getElementById('task-list');
-    const iteamsLeft = document.getElementById('items-left');
+     taskForm = document.getElementById('task-form');
+     taskInput = document.getElementById('task-input');
+     taskPriority = document.getElementById('task-priority');
+     taskDate = document.getElementById('task-date');
+     taskList = document.getElementById('task-list');
+    iteamsLeft = document.getElementById('items-left');
 
-    const filterButtons = document.querySelectorAll('.filter-button');
+     filterButtons = document.querySelectorAll('.filter-button');
 
     // log element verfication
     console.log("Form element:", taskForm);
@@ -59,6 +78,9 @@ function updateDocumentTitle(){
 
     //Update document title
     updateDocumentTitle();
+
+    // Add Event Listeners
+    taskForm.addEventListener("submit",handleFormSubmit);
 
     console.log("TaskMaster app initialized"); 
  }
